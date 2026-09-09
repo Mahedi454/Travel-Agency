@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Compass, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const companyLinks = [
   { href: "/about", label: "About us" },
@@ -49,9 +50,13 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-5">
             <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-500 text-white">
-                <Compass className="h-6 w-6" strokeWidth={2.2} />
-              </span>
+              <Image
+                src="/Travel Logo.png"
+                alt="Travelia logo"
+                width={256}
+                height={256}
+                className="h-11 w-11 shrink-0 object-contain"
+              />
               <span className="font-display text-2xl font-extrabold tracking-tight text-white">
                 Trav<span className="text-primary-400">elia</span>
               </span>

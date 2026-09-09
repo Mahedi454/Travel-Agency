@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
   AnimatePresence,
@@ -9,7 +10,6 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import {
-  Compass,
   Heart,
   Menu,
   Search,
@@ -89,9 +89,14 @@ export function Navbar() {
               className="flex shrink-0 items-center gap-2.5"
               aria-label="Travelia home"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-500 text-white shadow-lg shadow-primary-500/30">
-                <Compass className="h-6 w-6" strokeWidth={2.2} />
-              </span>
+              <Image
+                src="/Travel Logo.png"
+                alt="Travelia logo"
+                width={256}
+                height={256}
+                priority
+                className="h-11 w-11 shrink-0 object-contain"
+              />
               <span className="flex flex-col leading-none">
                 <span
                   className={cn(
@@ -272,9 +277,13 @@ export function Navbar() {
             >
               <div className="flex h-[76px] shrink-0 items-center justify-between border-b border-border px-5">
                 <div className="flex items-center gap-2.5">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500 text-white">
-                    <Compass className="h-5 w-5" strokeWidth={2.2} />
-                  </span>
+                  <Image
+                    src="/Travel Logo.png"
+                    alt="Travelia logo"
+                    width={160}
+                    height={160}
+                    className="h-10 w-10 shrink-0 object-contain"
+                  />
                   <span className="font-display text-xl font-extrabold tracking-tight text-foreground">
                     Trav<span className="text-primary-500">elia</span>
                   </span>
