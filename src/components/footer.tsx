@@ -158,17 +158,35 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-sm text-primary-50/60">
+        <div className="mt-14 flex flex-col items-center gap-6 border-t border-white/10 pt-8 sm:grid sm:grid-cols-3 sm:items-center">
+          <p className="text-center text-sm text-primary-50/60 sm:text-left">
             © {new Date().getFullYear()} Travelia. All rights reserved.
           </p>
-          <p className="flex items-center gap-2 text-sm text-primary-50/60">
+          <p className="flex items-center justify-center gap-2 text-center text-sm text-primary-50/60">
             Made for travelers
             <span className="text-primary-400" aria-hidden="true">
               ✦
             </span>
             Licensed &amp; insured (ATOL 11234)
           </p>
+          <a
+            href="https://shei-it.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 sm:justify-end"
+            aria-label="Shei IT"
+          >
+            <Image
+              src="/Shei IT Logo.png"
+              alt="Shei IT logo"
+              width={128}
+              height={128}
+              className="h-8 w-8 object-contain"
+            />
+            <span className="text-base font-bold text-primary-50/80 transition-colors hover:text-white">
+              Shei IT
+            </span>
+          </a>
         </div>
       </div>
     </footer>
